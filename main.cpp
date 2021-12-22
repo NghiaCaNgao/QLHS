@@ -48,6 +48,8 @@ void Top10ChemistryScore()
 void AddStudent()
 {
     studentManager.addStudents(INPUT::addStudentList());
+    studentManager.calcScore();
+    studentManager.sortStudentList();
     studentManager.printStudentList();
     std::system("pause");
 }
@@ -78,7 +80,6 @@ void ReadStudentList()
     studentManager.printStudentList();
     std::system("pause");
 }
-
 
 // Navagator functions
 bool action(int choice)
