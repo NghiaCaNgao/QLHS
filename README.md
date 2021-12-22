@@ -3,7 +3,7 @@
 >**Sinh viên thực hiện: BMD**  
 **Ma Sinh vien: 00000001**
 
-## :start: Cách sử dụng
+## :star: Cách sử dụng
 1. Clone repo
     ```shell 
     $ git clone https://github.com/NghiaCaNgao/QLHS.git
@@ -75,7 +75,9 @@ enum Subject
 ### Detail
 **Student**
 
-| Methods / Constructors      | Description                                 |
-|-----------------------------|---------------------------------------------|  
-| `Student()` > con > public  | Khởi tạo Stduent Object với các giá trị rỗng |
-| `Student(char studentID[50], char studentName[50], float mathScore, float physicsScore, float chemistryScore)` | Khởi tạo với các tham chiếu |
+| Methods / Constructors      | Description |
+|-----------------------------|-------------|  
+| ```Student()``` [#mytag]() | Khởi tạo ```Stduent Object``` với các giá trị rỗng |
+| ```Student(char studentID[50], char studentName[50], float mathScore, float physicsScore, float chemistryScore)``` | Khởi tạo với các tham chiếu |
+| ```Student(StudentData studentData)```| Khởi tạo với ```StudentData``` |
+| ```void setStudent(char studentID[50], char studentName[50], float mathScore, float physicsScore, float chemistryScore)``` | Đặt giá trị mới cho ```Stduent Object``` |
