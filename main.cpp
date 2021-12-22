@@ -9,6 +9,7 @@ const char *filePath = "./Sv1.dat";
 // Initialize value
 STUDENT::StudentManager studentManager;
 
+// Feature functions
 void Input()
 {
     studentManager.clearStudentList();
@@ -78,6 +79,8 @@ void ReadStudentList()
     std::system("pause");
 }
 
+
+// Navagator functions
 bool action(int choice)
 {
     switch (choice)

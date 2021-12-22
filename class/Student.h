@@ -7,6 +7,7 @@
 #include <fstream>
 #include <ios>
 
+// Define
 enum RankedAcademy
 {
     Excellent,
@@ -35,6 +36,7 @@ struct StudentData
 class Student
 {
 public:
+    // Constructor
     Student()
     {
         strcpy(this->studentData.studentID, "");
@@ -65,6 +67,7 @@ public:
         // this->calcScore();
     }
 
+    // Setter by reference
     void setStudent(char studentID[50], char studentName[50], float mathScore, float physicsScore, float chemistryScore)
     {
         strcpy(this->studentData.studentID, studentID);
@@ -75,17 +78,20 @@ public:
         // this->calcScore();
     }
 
+    // Setter by StudentData
     void setStudent(StudentData studentData)
     {
         this->studentData = studentData;
         // this->calcScore();
     }
 
+    // Getter
     StudentData getStudent()
     {
         return this->studentData;
     }
 
+    // Print student data
     void printStudent()
     {
         std::string RankLabels[5] = {"Xuat sac", "Kha", "Trung binh", "Yeu", "Kem"};
@@ -99,6 +105,7 @@ public:
         std::cout << std::endl;
     }
 
+    // Calculate average score
     void calcScore()
     {
         StudentData data = this->getStudent();
@@ -176,7 +183,7 @@ public:
         return this->studentList[index].getStudent();
     }
 
-    // remove a student from the list
+    // Remove a student from the list
     void removeStudent(int index)
     {
         if (index < 0 || index >= this->studentCount)
@@ -184,12 +191,14 @@ public:
         this->studentList.erase(this->studentList.begin() + index);
         this->studentCount--;
     }
+    // Calculate average score of all students
     void calcScore()
     {
         for (int i = 0; i < this->studentList.size(); i++)
             this->studentList[i].calcScore();
     }
 
+    // Print all students in the list
     void printStudentList()
     {
         std::system("cls");
@@ -270,6 +279,7 @@ public:
                 }
     }
 
+    // Remove a student from the list if subject score is below max_value
     void removeStudentsWithCondition(Subject subject, float max_value)
     {
         for (int i = 0; i < this->getStudentCount(); i++)
@@ -297,6 +307,7 @@ public:
         }
     }
 
+    // Save student list to file
     void saveStudentList(const char *filePath)
     {
         std::fstream file;
@@ -311,6 +322,7 @@ public:
         file.close();
     }
 
+    // Load student list from file
     void readStudentList(const char *filePath)
     {
         std::fstream file;
